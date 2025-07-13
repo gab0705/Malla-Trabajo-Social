@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Malla Curricular de Trabajo Social</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Malla Curricular de Trabajo Social</h1>
+
+        <div class="year">
+            <h2>Primer Año</h2>
+            <div class="semester">
+                <h3>I Semestre</h3>
+                <button class="course" id="matematicas" data-unlock="estadistica-i">Matemáticas</button>
+                <button class="course" id="bases-sociologicas" data-unlock="antropologia">Bases Sociológicas para el Trabajo Social</button>
+                <button class="course" id="fundamentos-trabajo-social" data-unlock="trabajo-social-disciplina-profesion">Fundamentos del Trabajo Social</button>
+                <button class="course" id="expresion-oral-escrita">Expresión Oral y Escrita</button>
+                <button class="course" id="autodesarrollo">Autodesarrollo</button>
+            </div>
+            <div class="semester">
+                <h3>II Semestre</h3>
+                <button class="course locked" id="estadistica-i" data-unlock="estadistica-ii,estudios-poblacion" data-prereq="matematicas">Estadística I</button>
+                <button class="course" id="epistemologia-ciencias-sociales" data-unlock="investigacion-social-i">Epistemología de las Ciencias Sociales</button>
+                <button class="course locked" id="trabajo-social-disciplina-profesion" data-unlock="metodos-intervencion" data-prereq="fundamentos-trabajo-social">Trabajo Social como Disciplina y Profesión</button>
+                <button class="course locked" id="antropologia" data-prereq="bases-sociologicas">Antropología Social</button>
+                <button class="course" id="psicologia-general" data-unlock="psicologia-social">Psicología General</button>
+                <button class="course" id="informatica-basica">Informática Básica</button>
+            </div>
+        </div>
+
+        <div class="year">
+            <h2>Segundo Año</h2>
+            <div class="semester">
+                <h3>III Semestre</h3>
+                <button class="course locked" id="estadistica-ii" data-unlock="investigacion-social-ii" data-prereq="estadistica-i">Estadística II</button>
+                <button class="course locked" id="investigacion-social-i" data-unlock="investigacion-social-ii" data-prereq="epistemologia-ciencias-sociales">Investigación Social I</button>
+                <button class="course locked" id="metodos-intervencion" data-unlock="trabajo-social-grupo,planificacion-social" data-prereq="trabajo-social-disciplina-profesion">Métodos de Intervención Profesional en el Trabajo Social</button>
+                <button class="course" id="ecologia-humana">Ecología Humana</button>
+                <button class="course locked" id="psicologia-social" data-prereq="psicologia-general">Psicología Social</button>
+                <button class="course" id="teoria-socio-politica">Teoría Socio-política</button>
+            </div>
+            <div class="semester">
+                <h3>IV Semestre</h3>
+                <button class="course" id="comunicacion">Comunicación</button>
+                <button class="course locked" id="estudios-poblacion" data-unlock="indicadores-sociales" data-prereq="estadistica-i">Estudios de Población</button>
+                <button class="course locked" id="trabajo-social-grupo" data-unlock="trabajo-social-ambito-comunitario" data-prereq="metodos-intervencion">Trabajo Social con Grupo</button>
+                <button class="course" id="tecnicas-grupales">Técnicas Grupales</button>
+                <button class="course" id="economia-politica" data-unlock="estado-politica-social">Economía Política</button>
+                <button class="course" id="historia-contemporanea-venezuela">Historia Contemporánea de Venezuela</button>
+            </div>
+        </div>
+
+        <div class="year">
+            <h2>Tercer Año</h2>
+            <div class="semester">
+                <h3>V Semestre</h3>
+                <button class="course locked" id="investigacion-social-ii" data-unlock="investigacion-social-iii" data-prereq="estadistica-ii,investigacion-social-i">Investigación Social II</button>
+                <button class="course" id="legislacion-social">Legislación Social</button>
+                <button class="course locked" id="trabajo-social-ambito-comunitario" data-unlock="practicas-trabajo-social-i" data-prereq="trabajo-social-grupo">Trabajo Social en el Ámbito Comunitario</button>
+                <button class="course locked" id="planificacion-social" data-unlock="formulacion-evaluacion-proyectos-sociales,indicadores-sociales" data-prereq="metodos-intervencion">Planificación Social</button>
+                <button class="course locked" id="estado-politica-social" data-unlock="administracion-gerencia-social,seguridad-social" data-prereq="economia-politica">Estado y Política Social</button>
+                <button class="course" id="ingles">Inglés</button>
+            </div>
+            <div class="semester">
+                <h3>VI Semestre</h3>
+                <button class="course locked" id="investigacion-social-iii" data-unlock="computacion-aplicada-ciencias-sociales" data-prereq="investigacion-social-ii">Investigación Social III</button>
+                <button class="course locked" id="administracion-gerencia-social" data-unlock="practicas-trabajo-social-i" data-prereq="estado-politica-social">Administración y Gerencia Social</button>
+                <button class="course" id="trabajo-social-individuo-familia" data-unlock="orientacion-familiar">Trabajo Social con Individuo y Familia</button>
+                <button class="course locked" id="formulacion-evaluacion-proyectos-sociales" data-prereq="planificacion-social">Formulación y Evaluación de Proyectos Sociales</button>
+                <button class="course locked" id="indicadores-sociales" data-prereq="estudios-poblacion,planificacion-social">Indicadores Sociales</button>
+                <button class="course" id="electiva-i">Electiva I</button>
+            </div>
+        </div>
+
+        <div class="year">
+            <h2>Cuarto Año</h2>
+            <div class="semester">
+                <h3>VII Semestre</h3>
+                <button class="course locked" id="practicas-trabajo-social-i" data-unlock="practicas-trabajo-social-ii" data-prereq="trabajo-social-ambito-comunitario,administracion-gerencia-social">Prácticas de Trabajo Social I</button>
+                <button class="course locked" id="seguridad-social" data-prereq="estado-politica-social">Seguridad Social</button>
+                <button class="course" id="electiva-ii">Electiva II</button>
+            </div>
+            <div class="semester">
+                <h3>VIII Semestre</h3>
+                <button class="course locked" id="computacion-aplicada-ciencias-sociales" data-prereq="investigacion-social-iii">Computación Aplicada a las Ciencias Sociales</button>
+                <button class="course locked" id="practicas-trabajo-social-ii" data-unlock="practicas-trabajo-social-iii" data-prereq="practicas-trabajo-social-i">Prácticas de Trabajo Social II</button>
+                <button class="course locked" id="orientacion-familiar" data-unlock="practicas-trabajo-social-iii" data-prereq="trabajo-social-individuo-familia">Orientación Familiar</button>
+            </div>
+        </div>
+
+        <div class="year">
+            <h2>Quinto Año</h2>
+            <div class="semester">
+                <h3>IX Semestre</h3>
+                <button class="course locked" id="practicas-trabajo-social-iii" data-prereq="practicas-trabajo-social-ii,orientacion-familiar">Prácticas de Trabajo Social III</button>
+            </div>
+            <div class="semester">
+                <h3>X Semestre</h3>
+                <button class="course" id="trabajo-grado">Trabajo de Grado</button>
+                <button class="course" id="seminario-servicio-comunitario">Seminario Servicio Comunitario</button>
+            </div>
+        </div>
+
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
